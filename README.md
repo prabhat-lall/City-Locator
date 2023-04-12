@@ -11,5 +11,9 @@
 5.Details of the screen should contain the city located on the map.
 
 
-ApkFile :-
-[cityLocator.zip](https://github.com/prabhat-lall/City-Locator/files/11211766/cityLocator.zip)
+ApkFile :-[app-locator.zip](https://github.com/prabhat-lall/City-Locator/files/11213754/app-locator.zip)
+
+VideoClicp :- 
+https://user-images.githubusercontent.com/73634792/231524851-2b1c7d03-8407-46d9-a731-9e198a6c68c8.mp4
+
+
