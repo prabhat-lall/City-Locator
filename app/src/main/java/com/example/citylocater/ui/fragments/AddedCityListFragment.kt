@@ -41,7 +41,7 @@ class AddedCityListFragment : Fragment() {
             val state = binding.tvState.text.toString()
             val lat = binding.tvLat.text.toString()
             val lon = binding.tvLon.text.toString()
-            val data = CityLocationItem(lat = lat, lon = lon, name = city, state = state)
+            val data = CityLocationItem(lat = lat, lon = lon, name = city, state = state , id=1)
             if (!data.lat.isNullOrEmpty() || !data.lon.isNullOrEmpty() || !data.name.isNullOrEmpty() || !data.state.isNullOrEmpty()) {
                 cityLocationList.add(data)
                 Toast.makeText(requireContext(), "Added ${data.name}", Toast.LENGTH_SHORT).show()

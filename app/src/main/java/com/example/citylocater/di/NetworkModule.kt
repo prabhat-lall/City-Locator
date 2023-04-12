@@ -30,4 +30,6 @@ object NetworkModule {
         return providesRetrofit()
             .create(CityLocationApi::class.java)
     }
+
+
 }
