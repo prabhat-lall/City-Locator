@@ -1,7 +1,8 @@
-package com.example.citylocater
+package com.example.citylocater.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.citylocater.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

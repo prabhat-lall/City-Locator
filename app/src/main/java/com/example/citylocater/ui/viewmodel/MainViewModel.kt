@@ -1,4 +1,4 @@
-package com.example.citylocater.viewmodel
+package com.example.citylocater.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

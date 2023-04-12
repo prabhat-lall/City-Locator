@@ -1,4 +1,4 @@
-package com.example.citylocater
+package com.example.citylocater.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,11 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.citylocater.R
 import com.example.citylocater.adapters.FavListAdapter
 import com.example.citylocater.databinding.FragmentAddedCityListBinding
-import com.example.citylocater.databinding.FragmentLocationDetailBinding
 import com.example.citylocater.models.CityLocationItem
 import com.google.gson.Gson
 
@@ -32,6 +33,8 @@ class AddedCityListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
+
 
         binding.fbAdd.setOnClickListener {
             val city = binding.tvCityName.text.toString()
@@ -39,7 +42,7 @@ class AddedCityListFragment : Fragment() {
             val lat = binding.tvLat.text.toString()
             val lon = binding.tvLon.text.toString()
             val data = CityLocationItem(lat = lat, lon = lon, name = city, state = state)
-            if (data.lat.isNullOrEmpty() || !data.lon.isNullOrEmpty() || !data.name.isNullOrEmpty() || !data.state.isNullOrEmpty()) {
+            if (!data.lat.isNullOrEmpty() || !data.lon.isNullOrEmpty() || !data.name.isNullOrEmpty() || !data.state.isNullOrEmpty()) {
                 cityLocationList.add(data)
                 Toast.makeText(requireContext(), "Added ${data.name}", Toast.LENGTH_SHORT).show()
             } else {

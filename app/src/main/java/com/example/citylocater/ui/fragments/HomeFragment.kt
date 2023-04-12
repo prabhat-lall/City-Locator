@@ -1,19 +1,20 @@
-package com.example.citylocater
+package com.example.citylocater.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.citylocater.R
 import com.example.citylocater.adapters.LocationListAdapter
 import com.example.citylocater.databinding.FragmentHomeBinding
 import com.example.citylocater.models.CityLocationItem
-import com.example.citylocater.viewmodel.MainViewModel
+import com.example.citylocater.ui.viewmodel.MainViewModel
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,6 +37,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (requireActivity() as AppCompatActivity).supportActionBar?.show()
+
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         viewModel.locationLiveData.observe(viewLifecycleOwner) {
             binding.rvCityLocation.layoutManager = LinearLayoutManager(requireContext())
@@ -54,7 +57,6 @@ class HomeFragment : Fragment() {
         val bundle = Bundle()
         bundle.putString("cityLocationItem", Gson().toJson(cityLocationItem))
         findNavController().navigate(R.id.action_homeFragment_to_locationDetailFragment,bundle)
-        Toast.makeText(requireContext(),"passing data to detail fragment", Toast.LENGTH_SHORT).show()
     }
 
 }

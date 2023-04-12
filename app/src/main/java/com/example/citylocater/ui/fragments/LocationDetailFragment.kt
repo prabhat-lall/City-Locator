@@ -1,12 +1,13 @@
-package com.example.citylocater
+package com.example.citylocater.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
-import com.example.citylocater.databinding.FragmentHomeBinding
 import com.example.citylocater.databinding.FragmentLocationDetailBinding
 import com.example.citylocater.models.CityLocationItem
 import com.example.citylocater.utility.Constants.MAP_VIEW_BUNDLE_KEY
@@ -35,6 +36,8 @@ class LocationDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val mapViewBundle = savedInstanceState?.getBundle(MAP_VIEW_BUNDLE_KEY)
         binding.mapView.onCreate(mapViewBundle)
+        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
+
 
         binding.ivBack.setOnClickListener {
             findNavController().popBackStack()

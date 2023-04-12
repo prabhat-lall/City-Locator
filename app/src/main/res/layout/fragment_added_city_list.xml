@@ -10,13 +10,13 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AddedCityListFragment">
+        tools:context=".ui.fragments.AddedCityListFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#131c2b">
+            android:background="@color/blue_200">
 
             <ImageView
                 android:id="@+id/iv_back"
