@@ -9,3 +9,7 @@
 4.Show the details of the city in the new screen when one of the cities is clicked.
 
 5.Details of the screen should contain the city located on the map.
+
+
+ApkFile :-
+[cityLocator.zip](https://github.com/prabhat-lall/City-Locator/files/11211766/cityLocator.zip)
