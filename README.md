@@ -1,15 +1,23 @@
 # City-Locator
 
-1.Design a screen which shows the list of cities(Use Recyclerview), use a floating button to add a new city in the new screen as desired.
+Developed a City Locator App using Kotlin programming language, which allows users to provide latitude and longitude and locate their city on the map.
 
-2.Added new city should be passed to the previous list screen dynamically, do not use local storage options like SQLite, Shared Preferences. The New Add City screen must contain fields like name, state, lat, lon.
+Utilized various Android technologies such as Map SDK, Hilt, Coroutine, Retrofit, RecyclerView, and Navigation to build a robust and efficient app.
 
-3.Consume the API for which the link below is shared with you below.
+Implemented a splash screen to improve user experience and provide a visually appealing launch.
 
-4.Show the details of the city in the new screen when one of the cities is clicked.
+Used Retrofit and Coroutine to efficiently manage network calls and fetch location data from the server.
 
-5.Details of the screen should contain the city located on the map.
+Utilized RecyclerView to display location data in a user-friendly manner and provide an intuitive interface for users.
+
+Implemented Navigation to create a seamless user experience and ensure that users can easily navigate between screens.
+
+Utilized Hilt for dependency injection to ensure that the app is modular, scalable, and maintainable.
 
 
-ApkFile :-
-[cityLocator.zip](https://github.com/prabhat-lall/City-Locator/files/11211766/cityLocator.zip)
+ApkFile :-[app-locator.zip](https://github.com/prabhat-lall/City-Locator/files/11213754/app-locator.zip)
+
+VideoClicp :- 
+https://user-images.githubusercontent.com/73634792/231524851-2b1c7d03-8407-46d9-a731-9e198a6c68c8.mp4
+
+
