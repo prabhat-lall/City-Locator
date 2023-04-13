@@ -58,7 +58,6 @@ class AddedCityListFragment : Fragment() {
         binding.rvAddCity.layoutManager = LinearLayoutManager(requireContext())
         binding.rvAddCity.adapter =
             FavListAdapter(::onCityLocationItemClicked, requireContext(), cityLocationList)
-
     }
 
     private fun onCityLocationItemClicked(cityLocationItem: CityLocationItem) {
@@ -68,8 +67,6 @@ class AddedCityListFragment : Fragment() {
             R.id.action_addedCityListFragment_to_locationDetailFragment,
             bundle
         )
-        Toast.makeText(requireContext(), "passing data to detail fragment", Toast.LENGTH_SHORT)
-            .show()
     }
 
 }
