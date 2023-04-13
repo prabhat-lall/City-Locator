@@ -44,7 +44,7 @@
             android:id="@+id/fb_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_favorite_border_24"
+            android:src="@drawable/baseline_search_24"
             android:outlineSpotShadowColor="@color/white"
             android:translationZ="3dp"
             android:layout_marginRight="40dp"
